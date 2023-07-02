@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include cash_holder_summary *.css
+recursive-include cash_holder_summary *.csv
+recursive-include cash_holder_summary *.html
+recursive-include cash_holder_summary *.ico
+recursive-include cash_holder_summary *.js
+recursive-include cash_holder_summary *.json
+recursive-include cash_holder_summary *.md
+recursive-include cash_holder_summary *.png
+recursive-include cash_holder_summary *.py
+recursive-include cash_holder_summary *.svg
+recursive-include cash_holder_summary *.txt
+recursive-exclude cash_holder_summary *.pyc
