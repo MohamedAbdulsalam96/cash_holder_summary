@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{cash_account}-{date_from}",
+ "creation": "2023-02-13 14:49:05.780701",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "cash_account",
+  "cash_holder_name",
+  "company",
+  "column_break_2",
+  "date_from",
+  "date_to",
+  "section_break_5",
+  "opening",
+  "column_break_7",
+  "deposit",
+  "column_break_9",
+  "withdrawal",
+  "column_break_10",
+  "closing",
+  "section_break_8",
+  "entries",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "date_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cash_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cash Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "entries",
+   "fieldtype": "Table",
+   "label": "Entries",
+   "options": "Cash Holder Entries"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "closing",
+   "fieldtype": "Currency",
+   "is_virtual": 1,
+   "label": "= Closing"
+  },
+  {
+   "fieldname": "opening",
+   "fieldtype": "Currency",
+   "is_virtual": 1,
+   "label": "Opening"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit",
+   "fieldtype": "Currency",
+   "is_virtual": 1,
+   "label": "+ Deposit"
+  },
+  {
+   "fieldname": "withdrawal",
+   "fieldtype": "Currency",
+   "is_virtual": 1,
+   "label": "- Withdrawal"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cash Holder Summary",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "print_hide": 1,
+   "remember_last_selected_value": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "cash_account.cash_holder_name",
+   "fieldname": "cash_holder_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cash Holder Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-02 22:05:17.843122",
+ "modified_by": "Administrator",
+ "module": "Cash Holder Summary",
+ "name": "Cash Holder Summary",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "name",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "cash_account",
+ "track_changes": 1
+}

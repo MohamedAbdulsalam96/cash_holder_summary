@@ -7,6 +7,22 @@ app_description = "Summary of payments for a cash holder account for a given per
 app_email = "kittiu@flo-works.co"
 app_license = "MIT"
 
+fixtures = [
+	{
+		"doctype": "Custom Field",
+		"filters": [
+			[
+				"name",
+				"in",
+				(
+					"Account-cash_holder",
+                    "Account-cash_holder_name",
+				),
+			]
+		],
+	}
+]
+
 # Includes in <head>
 # ------------------
 
