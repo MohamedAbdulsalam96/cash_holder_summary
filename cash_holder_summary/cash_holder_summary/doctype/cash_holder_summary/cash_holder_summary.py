@@ -8,7 +8,7 @@ from frappe.model.document import Document
 class CashHolderSummary(Document):
 
     def submit(self):
-        if (self.opening + self.deposit - self.withdrawal) != self.closing:
+        if round(self.opening + self.deposit - self.withdrawal, 2) != round(self.closing, 2):
             frappe.throw(_("Invalid entries or closing amount."))
         super(CashHolderSummary, self).submit()
 
